@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    position: relative;
+    width: 50%;
+    height: 40vh;
+    gap: 1rem;
+    position: relative;
+    background-color:#fff;
+}
+picture {
+    height: 100%;
+    object-fit: cover;
+}
+picture img{
+    height: 100%;
+}
+.profileContainer img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.profileContainer{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 5px;
+    font-size: 14px;
+    color: gray;
+}
+.profileContainer .share{
+    position: absolute;
+    right: 3rem;
+}
+.share button{
+    color: #9a8c7f ; 
+    padding: 5px;   
+    background-color: #335;
+    border-radius: 50%;
+    border: none;
+}
+.share button i{
+    color: #fff;
+}
+.social{
+    position: absolute;
+    top: -3rem;
+    right: 0rem;
+    padding: 10px;
+    width: 10rem;
+    background-color: #335;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    display: none;
+    border-radius: 5px;
+}
+.social h4{
+    color: gray;
+}
+.social::before{
+    content: '';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    background-color: #335;
+    right: 2px;
+    bottom: -3px;
+    border-radius: 0px 35px;
+    transform: rotate(36deg);
+}
+.social a{
+    text-decoration: none;
+    color: #fff;
+}
+@media (width <= 480px){
+    .container{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+    .container picture{
+        width: 100%;
+    }
+    picture img{
+        width: 100%;
+    }
+    .content{
+        gap: 2rem;
+    }
+    .content{
+        font-size: 14px;
+    }
+}
+
+@media (width <= 880px){
+    .container{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+    .container picture{
+        width: 100%;
+    }
+    picture img{
+        width: 100%;
+    }
+    .content{
+        gap: 2rem;
+    }
+    .content{
+        font-size: 14px;
+    }
+}
+
+
+
+.active{
+    display: flex;
+    animation-name: animate;
+    animation-duration: 1s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
